@@ -1,0 +1,34 @@
+body {
+    background-color: #f4d597;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .board {
+    height: 20rem;
+    aspect-ratio: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .cell {
+    border-bottom: 5px solid rgba(244, 115, 41, 0.889);
+    border-right: 5px solid rgb(230, 119, 22);
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "lucida console";
+    /* cursor: pointer; */
+    user-select: none;
+  }
+  .cell:nth-child(3n) {
+    border-right: none;
+  }
+  .cell:nth-child(n + 7) {
+    border-bottom: none;
+  }
+  .highlight {
+    background-color: #f0a000;
+  }
